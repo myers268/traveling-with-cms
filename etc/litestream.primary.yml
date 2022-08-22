@@ -1,0 +1,8 @@
+addr: ":9090"
+
+dbs:
+  - path: /var/lib/ghost/content/db
+    replicas:
+      - url: s3://traveling-with-sqlite-backup/db/
+        access-key-id: ${AWS_ACCESS_KEY_ID}
+        secret-access-key: ${AWS_SECRET_ACCESS_KEY}
